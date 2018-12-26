@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3模仿雷达扫描动画</title>
+
+  <link rel="stylesheet" href="css/dasd.css">
+  <style>
+    .a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      overflow: hidden;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .w1 {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      top: 90%;
+      transform: translateY(-90%);
+    }
+
+    .w2 {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      top: 90%;
+      transform: translateY(-90%);
+    }
+
+    .w3 {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      top: 90%;
+      transform: translateY(-90%);
+    }
+
+    .w4 {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      top: 90%;
+      transform: translateY(-90%);
+    }
+
+    .w5 {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      top: 90%;
+      transform: translateY(-90%);
+    }
+
+    .ring-outer {
+      height: 110px;
+      width: 110px;
+      position: absolute;
+      background: url(http://www.imaoda.com/s/img/tpl/ring-outer.png) no-repeat;
+      background-size: cover;
+      background-position: center;
+      animation: anti-clockwise 3s linear infinite;
+    }
+
+    @keyframes clockwise {
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+
+    @keyframes anti-clockwise {
+      0% {
+        transform: rotate(360deg)
+      }
+    }
+    .wenzi {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 30%;
+      transform: translateY(-30%);
+      z-index: 9999;
+    }
+    .wenzi_top {
+      font-size:70px;
+      user-select: none;
+      color: #fff;
+      padding: 10px 0px;
+      letter-spacing: 10px;
+    }
+    .wenzi_bottom {
+      font-size: 32px;
+      user-select: none;
+      color:rgba(255,255,255, .8); 
+      padding: 10px 0px;
+      letter-spacing: 10px;
+    }
+    .title{
+      margin-top: 80px;
+      font-size: 42px;
+      color: #fff;
+      letter-spacing: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+    <!-- 广西种业大数据平台一一种子销售数据采集分析系统 -->
+    <div class="wenzi">
+        <div class="wenzi_top">广西种业大数据平台</div>
+        <div class="wenzi_bottom">种子销售数据采集分析系统</div>
+        <div class="title">发布仪式</div>
+      </div>
+  <div class="a">
+    <div class="w1">
+      <div class="ring-outer"></div>
+      <div class="radar1"></div>
+    </div>
+    <div class="w2">
+      <div class="ring-outer"></div>
+      <div class="radar2"></div>
+    </div>
+    <div class="w3">
+      <div class="ring-outer"></div>
+      <div class="radar3"></div>
+    </div>
+    <div class="w4">
+      <div class="ring-outer"></div>
+      <div class="radar4"></div>
+    </div>
+    <div class="w5">
+      <div class="ring-outer"></div>
+      <div class="radar5"></div>
+    </div>
+  </div>
+  <!--   
+  <div class="radar2"></div>
+  <div class="radar3"></div>
+  <div class="radar4"></div>
+  <div class="radar5"></div> -->
+  <script src="js/jq.js"></script>
+  <script>
+    $(function(){ 
+      $(document).keydown(function(event){ 
+      if(event.keyCode==13){ 
+        window.location.href='./animation/index.html'
+      } 
+    })
+      }); 
+
+  </script>
+</body>
+
+</html>
